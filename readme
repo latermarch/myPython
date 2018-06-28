@@ -1,0 +1,16 @@
+#在管理员模式的控制台里输入上述命令后即可，python3.6用这个命令救活了pip，解决pip升级失败的问题
+python -m ensurepip
+#执行升级pip
+python -m pip install  --upgrade  pip
+
+#升级某包
+python -m pip install [要升级的包]
+
+#显示pip的安装库 
+pip list
+
+#显示安装目录
+#pip show -f <包名> 
+
+#卸载
+pip uninstall <包名> 
