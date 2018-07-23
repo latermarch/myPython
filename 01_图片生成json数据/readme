@@ -14,9 +14,3 @@ pip list
 
 #卸载
 pip uninstall <包名> 
-
-
-#安装 PyQt5
-pip install PyQt5
-#安装 NumPy
-pip install NumPy

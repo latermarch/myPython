@@ -5,14 +5,17 @@ import os
 import base64
 import json
 
+
 class inputData(object):
     def __init__(self, TaskID, Paras, DataInfo):
         self.TaskID = TaskID
         self.Paras = Paras
         self.DataInfo = DataInfo
 
+
 def inputDatadict(stu):
     return json.dumps(stu, default=lambda stu: stu.__dict__)
+
 
 def is_img(ext):
     ext = ext.lower()
@@ -27,6 +30,7 @@ def is_img(ext):
     else:
         return False
 
+
 def getData(directory):
     alist = os.listdir(rootdir)  # 列出文件夹下所有的目录与文件
     data = []
@@ -38,7 +42,8 @@ def getData(directory):
                 data.append(imagedata.decode('utf-8'))
     return data
 
-#-----------------------------main--------------------
+
+# -----------------------------main--------------------
 taskid = '12345'
 
 datatype = 1
@@ -47,7 +52,7 @@ AlgoParam = 'FaceRecon'
 paras = dict((['DataType', datatype], ['AlgoParam', AlgoParam]))
 
 # 计算照片数量
-rootdir = r'./testpic'#当前目录
+rootdir = r'./testpic'  # 当前目录
 encodetype = 1
 data = getData(rootdir)
 count = (len(data))  # 计算文件个数
